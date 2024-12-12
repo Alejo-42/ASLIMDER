@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('sitioWeb/css/style.css')}}">
+    <link rel="shortcut icon" href="{{asset('sitioWeb/img/logo-aslimder.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/icono-limpiez.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>PAGINA WEB</title>
+    <title>ASLIMDER </title>
 </head>
 <body>
-    <header>
+    <header id="volver">
         <nav>
-        <div>
-            <img src="https://placehold.co/50" alt="Icono">
+        <div class="icono">
+            <img src="{{asset('sitioWeb/img/logo aslimder.png')}}" alt="Icono">
         </div>
         <button id="BtnAbrir"><i class="fa-solid fa-caret-down"></i></button>
         <ul class="inicio">
@@ -36,21 +38,21 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="https://placehold.co/500x250" class="d-block w-100" alt="ServiciosImg1">
+                        <img src="{{asset('sitioWeb/img/servicios1.jpg')}}" class="d-block w-100" alt="ServiciosImg1">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
                           <h5>Servicio 1</h5>
                           <p>Descripción 1</p>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="https://placehold.co/500x250" class="d-block w-100" alt="ServiciosImg2">
+                        <img src="{{asset('sitioWeb/img/servicios2.jpg')}}" class="d-block w-100" alt="ServiciosImg2">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
                           <h5>Servicio 2</h5>
                           <p>Descripción 2</p>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="https://placehold.co/500x250" class="d-block w-100" alt="ServiciosImg3">
+                        <img src="{{asset('sitioWeb/img/servicios3.jpg')}}" class="d-block w-100" alt="ServiciosImg3">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
                           <h5>Servicio 3</h5>
                           <p>Descripción 3</p>
@@ -71,7 +73,7 @@
         <div id="sobre" class="m-v">
             <div class="mision">
                 <h3>Misión:</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsa a distinctio qui voluptatem inventore, quis sequi esse magni dicta, aspernatur numquam ex quae sit impedit delectus. Deleniti, tenetur architecto?</p>
+                <p>Ofrecer servicios de limpieza respetuosos con el medio ambiente, utilizando productos ecológicos y prácticas sostenibles, para preservar el planeta y mejorar la calidad de vida de las personas.</p>
                 <div>
                     <img src="https://placehold.co/150" alt="Misión">
                 </div>
@@ -81,7 +83,7 @@
                     <img src="https://placehold.co/150" alt="Visión">
                 </div>
                 <h3>Visión:</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus commodi quos modi velit excepturi doloremque temporibus sint cum veniam iure voluptatibus, dicta ut consequatur quod pariatur maxime error tenetur?</p>
+                <p>Ser una empresa referente en limpieza sostenible, inspirando a otros a adoptar prácticas más responsables y contribuyendo a un futuro más limpio y saludable.</p>
             </div>
         </div>
     </main>
@@ -117,7 +119,7 @@
         </div>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>
     </footer>
-    <script src="{{asset('sitioWeb/js/script.js')}}"></script>
+    <script src="{{asset('sitioWeb/script.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
