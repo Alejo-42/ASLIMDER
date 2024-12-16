@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Faker\Factory as Faker;
 
-class InicioSeeder extends Seeder
+class RedesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,8 +17,10 @@ class InicioSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        DB::table('inicios')->insert([
-            'mision'->$faker->name
+        DB::table('redes')->insert([
+            'nombre'=>$faker->firstName,
+            'icono'=>$faker->name,
+            'link'=>$faker->url('facebook.com')
         ]);
     }
 }

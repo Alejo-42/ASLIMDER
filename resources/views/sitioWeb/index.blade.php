@@ -73,7 +73,9 @@
         <div id="sobre" class="m-v">
             <div class="mision">
                 <h3>Misión:</h3>
-                <p>Ofrecer servicios de limpieza respetuosos con el medio ambiente, utilizando productos ecológicos y prácticas sostenibles, para preservar el planeta y mejorar la calidad de vida de las personas.</p>
+                @foreach($getMV as $mision)
+                <p>{{$mision->mision}}</p>
+                @endforeach
                 <div>
                     <img src="https://placehold.co/150" alt="Misión">
                 </div>
@@ -83,7 +85,9 @@
                     <img src="https://placehold.co/150" alt="Visión">
                 </div>
                 <h3>Visión:</h3>
-                <p>Ser una empresa referente en limpieza sostenible, inspirando a otros a adoptar prácticas más responsables y contribuyendo a un futuro más limpio y saludable.</p>
+                @foreach($getMV as $vision)
+                <p>{{$vision->vision}}</p>
+                @endforeach
             </div>
         </div>
     </main>
@@ -92,9 +96,9 @@
             <div class="redes">
                 <h4>Siguenos en nuestras redes sociales:</h4>
                 <ul>
-                    <li><a target="_blank" class="face" href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a target="_blank" class="ig" href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a target="_blank" class="tt" href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                  @foreach($getRedes as $Redes)
+                    <li><a target="_blank" href="{{$Redes->link}}"><i class="fa-brands fa-{{$Redes->icono}}"></i></a></li>
+                    @endforeach
                 </ul>
                 <div>
                   <a href="#volver"><button class="volver"><i class="fa-solid fa-caret-up"></i></button></a>
@@ -102,19 +106,20 @@
             </div>
             <div id="contacto" class="contacto">
                 <h4>Contactanos:</h4>
-                <p><i class="fa-solid fa-phone"></i> 02-9999-999 <a target="_blank" href=""><i class="fa-brands fa-whatsapp"></i></a></p> 
-                <p><i class="fa-solid fa-phone"></i> 02-9999-999 <a target="_blank" href=""><i class="fa-brands fa-whatsapp"></i></a></p>
+                @foreach($getContactos as $Contactos)
+                <p><i class="fa-solid fa-phone"></i> {{$Contactos->numero_c}} <a target="_blank" href="https://wa.me/{{$Contactos->numero}}"><i class="fa-brands fa-whatsapp"></i></a></p>
                 <h4>Correo:</h4>
-                <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">tu.correo@gmail.com</a></p>
-                <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">tu.correo@gmail.com</a></p>
+                <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">{{$Contactos->correo}}</a></p>
                 <h4>Dirección:</h4>
                 <p class="direccion"><i class="fa-solid fa-location-dot"></i> <a href="">Salvador Bravo, Quito 170131</a></p>
-            </div>
+                @endforeach
+              </div>
             <div id="direccion" class="geo">
                 <h4><i class="fa-solid fa-map-location-dot"></i> Geolocalización:</h4>
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2251.619275267255!2d-78.5400965835217!3d-0.2686214762534603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d598e9248ea1fd%3A0x70edbef75c8b1e7e!2sIRFEYAL!5e0!3m2!1ses!2sec!4v1733155481608!5m2!1ses!2sec" width="250" height="250" style="border:1vh;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                <a href="/panelDeControl">Panel de control</a>
             </div>
         </div>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>
