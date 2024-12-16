@@ -15,7 +15,6 @@ class Redes extends Migration
     {
         Schema::create('redes', function(Blueprint $table){
             $table->id();
-            $table->string('nombre');
             $table->string('icono');
             $table->text('link');
             $table->timestamps();

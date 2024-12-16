@@ -10,6 +10,6 @@ class Redes extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'icono', 'link'
+        'icono', 'link'
     ];
 }

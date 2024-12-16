@@ -19,6 +19,7 @@ use App\Http\Controllers\ServiciosController;
 */
 
 Route::get('/', [PaginaController::class,'inicio']);
+Route::get('/volver',[PaginaController::class,'panelDeControl']);
 Route::get('/panelDeControl', [PaginaController::class,'panelDeControl']);
 // MISION VISION //
 Route::get('/MV',[MisionVisionController::class,'inicio']);

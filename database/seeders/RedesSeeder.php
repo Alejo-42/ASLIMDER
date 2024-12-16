@@ -18,7 +18,6 @@ class RedesSeeder extends Seeder
     {
         $faker = Faker::create();
         DB::table('redes')->insert([
-            'nombre'=>$faker->firstName,
             'icono'=>$faker->name,
             'link'=>$faker->url('facebook.com')
         ]);

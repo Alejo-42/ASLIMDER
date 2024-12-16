@@ -47,9 +47,6 @@
         <div class="guardarRedes">
             <form action="/guardarRedes" method="post">
                 @csrf
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" name="nombre" id="nombre"><br>
-
                 <label for="icono">Icono:</label><br>
                 <input type="text" name="icono" id="icono"><br>
 
@@ -60,7 +57,7 @@
             </form>
         </div>
     </main>
-    <a href="/">Volver</a>
+    <a href="/volver">Volver</a>
     <footer>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>
     </footer>

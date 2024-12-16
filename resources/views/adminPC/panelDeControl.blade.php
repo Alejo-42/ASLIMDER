@@ -17,6 +17,7 @@
             <li><a href="/redes">Redes</a></li>
             <li><a href="/servicios">Servicios</a></li>
         </ul>
+        <a href="/">Volver</a>
     </main>
     <footer>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>

@@ -60,7 +60,7 @@
             </form>
         </div>
     </main>
-    <a href="/">Volver</a>
+    <a href="/volver">Volver</a>
     <footer>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>
     </footer>

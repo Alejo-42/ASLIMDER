@@ -10,9 +10,6 @@
     <form action="/actualizarRedes/{{$editarRedes->id}}" method="post">
         @csrf
         @method('put')
-        <label for="nombre">Nombre:</label><br>
-        <input value="{{$editarRedes->nombre}}" type="text" name="nombre" id="nombre"><br>
-
         <label for="icono">Icono:</label><br>
         <input value="{{$editarRedes->icono}}" type="text" name="icono" id="icono"><br>
 
