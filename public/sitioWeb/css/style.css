@@ -103,7 +103,8 @@ main{
             #contenidoCarrusel{
                 h5{
                     color: black;
-                    font-size: 6vw;
+                    font-weight: bolder;
+                    font-size: 4vw;
                 }
                 p{
                     color: black;

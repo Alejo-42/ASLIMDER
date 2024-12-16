@@ -40,22 +40,55 @@
                       <div class="carousel-item active">
                         <img src="{{asset('sitioWeb/img/servicios1.jpg')}}" class="d-block w-100" alt="ServiciosImg1">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                          <h5>Servicio 1</h5>
-                          <p>Descripción 1</p>
-                        </div>
+                        @php
+                        $i = 0;
+                        @endphp
+
+                        @foreach($getServicios as $Servicios)
+                            @if($i == 0)
+                                <h5>{{$Servicios->servicio}}</h5>
+                                <p>{{$Servicios->descripcion}}</p>
+                            @endif
+                            @php
+                            $i++;
+                            @endphp
+                        @endforeach                        
+                      </div>
                       </div>
                       <div class="carousel-item">
                         <img src="{{asset('sitioWeb/img/servicios2.jpg')}}" class="d-block w-100" alt="ServiciosImg2">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                          <h5>Servicio 2</h5>
-                          <p>Descripción 2</p>
+                        @php
+                        $i = 0;
+                        @endphp
+
+                        @foreach($getServicios as $Servicios)
+                            @if($i == 1)
+                                <h5>{{$Servicios->servicio}}</h5>
+                                <p>{{$Servicios->descripcion}}</p>
+                            @endif
+                            @php
+                            $i++;
+                            @endphp
+                        @endforeach                        
                         </div>
                       </div>
                       <div class="carousel-item">
                         <img src="{{asset('sitioWeb/img/servicios3.jpg')}}" class="d-block w-100" alt="ServiciosImg3">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                          <h5>Servicio 3</h5>
-                          <p>Descripción 3</p>
+                        @php
+                        $i = 0;
+                        @endphp
+
+                        @foreach($getServicios as $Servicios)
+                            @if($i == 2)
+                                <h5>{{$Servicios->servicio}}</h5>
+                                <p>{{$Servicios->descripcion}}</p>
+                            @endif
+                            @php
+                            $i++;
+                            @endphp
+                        @endforeach                        
                         </div>
                       </div>
                     </div>
