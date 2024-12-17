@@ -14,7 +14,7 @@ class ServiciosController extends Controller
     public function guardar(Request $request){
         Servicios::create($request->all());
         $getServicios = Servicios::all();
-        return view('layouts/servicios', compact('getServicios'));
+        return redirect()->to('/servicios');
     }
     public function editar($id){
         $editarServicios = Servicios::where('id',$id)->firstOrFail();
@@ -24,13 +24,11 @@ class ServiciosController extends Controller
         $actServicios = Servicios::findOrFail($id);
         $requestServicios = $request->all();
         $actServicios->update($requestServicios);
-        $getServicios = Servicios::all();
-        return view('layouts/servicios', compact('getServicios'));
+        return redirect()->to('/servicios');
     }
     public function eliminar($id){
         $eliminarServicios = Servicios::findOrFail($id);
         $eliminarServicios->delete();
-        $getServicios = Servicios::all();
-        return view('layouts/servicios', compact('getServicios'));
+        return redirect()->to('/servicios');
     }
 }

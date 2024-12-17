@@ -13,8 +13,7 @@ class ContactosController extends Controller
     }
     public function guardar(Request $request){
         Contactos::create($request->all());
-        $getContactos = Contactos::all();
-        return view('layouts/contactos', compact('getContactos'));
+        return redirect()->to('/contactos');
     }
     public function editar($id){
         $editarContactos = Contactos::where('id',$id)->firstOrFail();
@@ -24,13 +23,11 @@ class ContactosController extends Controller
         $actContactos = Contactos::findOrFail($id);
         $requestContactos = $request->all();
         $actContactos->update($requestContactos);
-        $getContactos = Contactos::all();
-        return view('layouts/contactos', compact('getContactos'));
+        return redirect()->to('/contactos');
     }
     public function eliminar($id){
         $eliminarContactos = Contactos::findOrFail($id);
         $eliminarContactos->delete();
-        $getContactos = Contactos::all();
-        return view('layouts/contactos', compact('getContactos'));
+        return redirect()->to('/contactos');
     }
 }

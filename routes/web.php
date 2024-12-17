@@ -17,29 +17,31 @@ use App\Http\Controllers\ServiciosController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// PAGINA PRINCIPAL //
 Route::get('/', [PaginaController::class,'inicio']);
 Route::get('/volver',[PaginaController::class,'panelDeControl']);
 Route::get('/panelDeControl', [PaginaController::class,'panelDeControl']);
 // MISION VISION //
-Route::get('/MV',[MisionVisionController::class,'inicio']);
-Route::post('/guardarMV',[MisionVisionController::class,'guardar']);
-Route::get('/editar/{id}',[MisionVisionController::class,'editar']);
-Route::put('/actualizar/{id}',[MisionVisionController::class,'actualizar']);
-Route::delete('/eliminar/{id}',[MisionVisionController::class,'eliminar']);
+Route::get('/misionVision',[MisionVisionController::class,'inicio']);
+Route::post('/misionVision/guardar',[MisionVisionController::class,'guardar']);
+Route::get('/misionVision/editar/{id}',[MisionVisionController::class,'editar']);
+Route::put('/misionVision/actualizar/{id}',[MisionVisionController::class,'actualizar']);
+Route::delete('/misionVision/eliminar/{id}',[MisionVisionController::class,'eliminar']);
 // CONTACTOS //
 Route::get('/contactos',[ContactosController::class,'inicio']);
-Route::post('/guardarContactos',[ContactosController::class,'guardar']);
-Route::get('/editarContactos/{id}',[ContactosController::class,'editar']);
-Route::put('/actualizarContactos/{id}',[ContactosController::class,'actualizar']);
-Route::delete('/eliminarContactos/{id}',[ContactosController::class,'eliminar']);
+Route::post('/contactos/guardar',[ContactosController::class,'guardar']);
+Route::get('/contactos/editar/{id}',[ContactosController::class,'editar']);
+Route::put('/contactos/actualizar/{id}',[ContactosController::class,'actualizar']);
+Route::delete('/contactos/eliminar/{id}',[ContactosController::class,'eliminar']);
 // REDES //
 Route::get('/redes',[RedesController::class,'inicio']);
-Route::post('/guardarRedes',[RedesController::class,'guardar']);
-Route::get('/editarRedes/{id}',[RedesController::class,'editar']);
-Route::put('/actualizarRedes/{id}',[RedesController::class,'actualizar']);
+Route::post('/redes/guardar',[RedesController::class,'guardar']);
+Route::get('/redes/editar/{id}',[RedesController::class,'editar']);
+Route::put('/redes/actualizar/{id}',[RedesController::class,'actualizar']);
+Route::delete('/redes/eliminar/{id}',[RedesController::class,'eliminar']);
 // SERVICIOS //
 Route::get('/servicios',[ServiciosController::class,'inicio']);
-Route::post('/guardarServicios',[ServiciosController::class,'guardar']);
-Route::get('/editarServicios/{id}',[ServiciosController::class,'editar']);
-Route::put('/actualizarServicios/{id}',[ServiciosController::class,'actualizar']);
+Route::post('/servicios/guardar',[ServiciosController::class,'guardar']);
+Route::get('/servicios/editar/{id}',[ServiciosController::class,'editar']);
+Route::put('/servicios/actualizar/{id}',[ServiciosController::class,'actualizar']);
+Route::delete('/servicios/eliminar/{id}',[ServiciosController::class,'eliminar']);

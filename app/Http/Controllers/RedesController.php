@@ -14,7 +14,7 @@ class RedesController extends Controller
     public function guardar(Request $request){
         Redes::create($request->all());
         $getRedes = Redes::all();
-        return view('layouts/redes', compact('getRedes'));
+        return redirect()->to('/redes');
     }
     public function editar($id){
         $editarRedes = Redes::where('id',$id)->firstOrFail();
@@ -24,13 +24,11 @@ class RedesController extends Controller
         $actRedes = Redes::findOrFail($id);
         $requestRedes = $request->all();
         $actRedes->update($requestRedes);
-        $getRedes = Redes::all();
-        return view('layouts/redes', compact('getRedes'));
+        return redirect()->to('/redes');
     }
     public function eliminar($id){
         $eliminarRedes = Redes::findOrFail($id);
         $eliminarRedes->delete();
-        $getRedes = Redes::all();
-        return view('layouts/redes', compact('getRedes'));
+        return redirect()->to('/redes');
     }
 }

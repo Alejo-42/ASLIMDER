@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>EDITAR REDES</h1>
-    <form action="/actualizarRedes/{{$editarRedes->id}}" method="post">
+    <form action="/redes/actualizar/{{$editarRedes->id}}" method="post">
         @csrf
         @method('put')
         <label for="icono">Icono:</label><br>

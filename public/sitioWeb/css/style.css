@@ -322,6 +322,19 @@ footer{
                 display: flex;
                 justify-content: center;
             }
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                a{
+                color: rgb(150, 150, 150);
+                padding: 2vw;
+                transition: all 0.5s;
+                }
+                a:hover{
+                    color: white;
+                }
+            }
         }
     }
     .derechos{

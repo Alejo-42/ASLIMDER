@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('sitioWeb/css/layouts/misionVision/style.css')}}">
+    <link rel="stylesheet" href="{{asset('sitioWeb/css/layouts/contactos/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>CONTACTOS</title>
@@ -13,8 +13,8 @@
         <h1>CONTACTOS</h1>
     </header>
     <main>
-        <div class="tableMV">
-            <table class="table table-dark">
+        <div class="tabla">
+            <table class="table table-bordered table-dark">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -32,8 +32,8 @@
                     <td>{{$Contactos->numero_c}}</td>
                     <td>{{$Contactos->correo}}</td>
                     <td>
-                        <a href="/editarContactos/{{$Contactos->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
-                        <form action="/eliminarContactos/{{$Contactos->id}}" method="post">
+                        <a href="/contactos/editar/{{$Contactos->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
+                        <form action="/contactos/eliminar/{{$Contactos->id}}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger" type="submit">Eliminar</button>
@@ -44,8 +44,9 @@
                 </tbody>
             </table>
         </div>
-        <div class="guardarContactos">
-            <form action="/guardarContactos" method="post">
+        <div class="formulario">
+            <h4>Crear un nuevo contacto:</h4>
+            <form action="/contactos/guardar" method="post">
                 @csrf
                 <label for="numero">Número:</label><br>
                 <input type="text" name="numero" id="numero"><br>

@@ -15,14 +15,33 @@ body{
 header{
     display: flex;
     justify-content: center;
+    background-color: darkcyan;
     h1{
         padding: 2vw;
+        color: white;
     }
 }
 main{
     display: flex;
     flex-direction: column;
     flex: 1;
+    ul{
+        padding: 2vw;
+        li{
+            list-style-type: none;
+            padding: 1vw;
+            a{
+                text-decoration: none;
+                color: black;
+                padding: 1vh;
+                transition: all 0.5s;
+            }
+            a:hover{
+                background-color: gray;
+                color: white;
+            }
+        }
+    }
 }
 footer{
     background-color: black;

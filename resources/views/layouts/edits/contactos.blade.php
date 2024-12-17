@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>EDITAR CONTACTOS</h1>
-    <form action="/actualizarContactos/{{$editarContactos->id}}" method="post">
+    <form action="/contactos/actualizar/{{$editarContactos->id}}" method="post">
         @csrf
         @method('put')
         <label for="numero">Número:</label><br>

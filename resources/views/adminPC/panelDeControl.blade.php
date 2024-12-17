@@ -12,12 +12,12 @@
     </header>
     <main>
         <ul>
-            <li><a href="/MV">Mision Vision</a></li>
+            <li><a href="/misionVision">Mision Vision</a></li>
             <li><a href="/contactos">Contactos</a></li>
             <li><a href="/redes">Redes</a></li>
             <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/">Volver</a></li>
         </ul>
-        <a href="/">Volver</a>
     </main>
     <footer>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>

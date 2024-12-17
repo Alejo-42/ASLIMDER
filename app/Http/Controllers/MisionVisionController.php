@@ -13,8 +13,7 @@ class MisionVisionController extends Controller
     }
     public function guardar(Request $request){
         MisionVision::create($request->all());
-        $getMV = MisionVision::all();
-        return view('layouts/misionVision', compact('getMV'));
+        return redirect()->to('/misionVision');
     }
     public function editar($id){
         $editarMV = MisionVision::where('id',$id)->firstOrFail();
@@ -24,13 +23,11 @@ class MisionVisionController extends Controller
         $actMV = MisionVision::findOrFail($id);
         $requestMV = $request->all();
         $actMV->update($requestMV);
-        $getMV = MisionVision::all();
-        return view('layouts/misionVision', compact('getMV'));
+        return redirect()->to('/misionVision');
     }
     public function eliminar($id){
         $eliminarMV = MisionVision::findOrFail($id);
         $eliminarMV->delete();
-        $getMV = MisionVision::all();
-        return view('layouts/misionVision', compact('getMV'));
+        return redirect()->to('/misionVision');
     }
 }

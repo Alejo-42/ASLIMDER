@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>EDITAR MISION VISION</h1>
-    <form action="/actualizar/{{$editarMV->id}}" method="post">
+    <form action="/misionVision/actualizar/{{$editarMV->id}}" method="post">
         @csrf
         @method('put')
         <label for="mision">Mision:</label><br>

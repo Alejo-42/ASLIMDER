@@ -144,7 +144,7 @@
                 <h4>Correo:</h4>
                 <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">{{$Contactos->correo}}</a></p>
                 <h4>Dirección:</h4>
-                <p class="direccion"><i class="fa-solid fa-location-dot"></i> <a href="">Salvador Bravo, Quito 170131</a></p>
+                <p class="direccion"><i class="fa-solid fa-location-dot"></i> Salvador Bravo, Quito 170131</p>
                 @endforeach
               </div>
             <div id="direccion" class="geo">
@@ -152,7 +152,9 @@
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2251.619275267255!2d-78.5400965835217!3d-0.2686214762534603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d598e9248ea1fd%3A0x70edbef75c8b1e7e!2sIRFEYAL!5e0!3m2!1ses!2sec!4v1733155481608!5m2!1ses!2sec" width="250" height="250" style="border:1vh;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <a href="/panelDeControl">Panel de control</a>
+                <div>
+                    <a href="/panelDeControl"><i class="fa-solid fa-dice-d6"></i></a>
+                </div>
             </div>
         </div>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>

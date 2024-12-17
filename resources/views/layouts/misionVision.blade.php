@@ -10,28 +10,28 @@
 </head>
 <body>
     <header>
-        <h1>MISION VISION</h1>
+        <h1>MISION Y VISION</h1>
     </header>
     <main>
-        <div class="tableMV">
-            <table class="table table-dark">
+        <div class="tabla">
+            <table class="table table-bordered table-dark">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Mision</th>
-                        <th scope="col">Vision</th>
+                        <th scope="col">Misión</th>
+                        <th scope="col">Visión</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($getMV as $MV)
+                @foreach($getMV as $MV)
                 <tr>
                     <th>{{$MV->id}}</th>
                     <td>{{$MV->mision}}</td>
                     <td>{{$MV->vision}}</td>
                     <td>
-                        <a href="/editar/{{$MV->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
-                        <form action="/eliminar/{{$MV->id}}" method="post">
+                        <a href="/misionVision/editar/{{$MV->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
+                        <form action="/misionVision/eliminar/{{$MV->id}}" method="post">
                             @csrf
                             @method('delete')
                             <button class="btn btn-danger" type="submit">Eliminar</button>
@@ -42,20 +42,23 @@
                 </tbody>
             </table>
         </div>
-        <div class="guardarMV">
-            <form action="/guardarMV" method="post">
+        <div class="formulario">
+            <h4>Crear una nueva misión y visión:</h4>
+            <form action="/misionVision/guardar" method="post">
                 @csrf
-                <label for="mision">Mision:</label><br>
+                <label for="mision">Misión:</label><br>
                 <input type="text" name="mision" id="mision"><br>
 
-                <label for="vision">Vision:</label><br>
+                <label for="vision">Visión:</label><br>
                 <input type="text" name="vision" id="vision"><br>
-                <hr>
-                <button type="submit">Guardar Datos</button>
+                <br>
+                <button type="submit">Guardar</button>
             </form>
         </div>
+        <div>
+            <a class="volver" href="/volver">Volver</a>
+        </div>
     </main>
-    <a href="/volver">Volver</a>
     <footer>
         <p class="derechos">Derechos de autor reservados. &copy 2024</p>
     </footer>
