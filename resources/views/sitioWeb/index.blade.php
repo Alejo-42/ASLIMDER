@@ -40,55 +40,22 @@
                       <div class="carousel-item active">
                         <img src="{{asset('sitioWeb/img/servicios1.jpg')}}" class="d-block w-100" alt="ServiciosImg1">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                        @php
-                        $i = 0;
-                        @endphp
-
-                        @foreach($getServicios as $Servicios)
-                            @if($i == 0)
-                                <h5>{{$Servicios->servicio}}</h5>
-                                <p>{{$Servicios->descripcion}}</p>
-                            @endif
-                            @php
-                            $i++;
-                            @endphp
-                        @endforeach                        
-                      </div>
+                            <h5>SERVICIO</h5>
+                            <p>descripcion</p>
+                        </div>
                       </div>
                       <div class="carousel-item">
                         <img src="{{asset('sitioWeb/img/servicios2.jpg')}}" class="d-block w-100" alt="ServiciosImg2">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                        @php
-                        $i = 0;
-                        @endphp
-
-                        @foreach($getServicios as $Servicios)
-                            @if($i == 1)
-                                <h5>{{$Servicios->servicio}}</h5>
-                                <p>{{$Servicios->descripcion}}</p>
-                            @endif
-                            @php
-                            $i++;
-                            @endphp
-                        @endforeach                        
+                            <h5>SERVICIO</h5>
+                            <p>descripcion</p>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <img src="{{asset('sitioWeb/img/servicios3.jpg')}}" class="d-block w-100" alt="ServiciosImg3">
                         <div id="contenidoCarrusel" class="carousel-caption d-none d-md-block">
-                        @php
-                        $i = 0;
-                        @endphp
-
-                        @foreach($getServicios as $Servicios)
-                            @if($i == 2)
-                                <h5>{{$Servicios->servicio}}</h5>
-                                <p>{{$Servicios->descripcion}}</p>
-                            @endif
-                            @php
-                            $i++;
-                            @endphp
-                        @endforeach                        
+                                <h5>SERVICIO</h5>
+                                <p>descripcion</p>
                         </div>
                       </div>
                     </div>
@@ -106,9 +73,7 @@
         <div id="sobre" class="m-v">
             <div class="mision">
                 <h3>Misión:</h3>
-                @foreach($getMV as $mision)
-                <p>{{$mision->mision}}</p>
-                @endforeach
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quisquam nisi, nam amet et esse. Voluptatem eius perspiciatis doloribus porro, delectus molestiae non adipisci vitae magnam, eos, minus sunt saepe?</p>
                 <div>
                     <img src="https://placehold.co/150" alt="Misión">
                 </div>
@@ -118,9 +83,7 @@
                     <img src="https://placehold.co/150" alt="Visión">
                 </div>
                 <h3>Visión:</h3>
-                @foreach($getMV as $vision)
-                <p>{{$vision->vision}}</p>
-                @endforeach
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus quae vero tempora suscipit impedit aliquid ratione nihil et! Quasi voluptate illo corrupti aperiam eaque odit nulla architecto. Tenetur, accusamus?</p>
             </div>
         </div>
     </main>
@@ -129,9 +92,9 @@
             <div class="redes">
                 <h4>Siguenos en nuestras redes sociales:</h4>
                 <ul>
-                  @foreach($getRedes as $Redes)
-                    <li><a target="_blank" href="{{$Redes->link}}"><i class="fa-brands fa-{{$Redes->icono}}"></i></a></li>
-                    @endforeach
+                    <li><a target="_blank" href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a target="_blank" href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a target="_blank" href=""><i class="fa-brands fa-tiktok"></i></a></li>
                 </ul>
                 <div>
                   <a href="#volver"><button class="volver"><i class="fa-solid fa-caret-up"></i></button></a>
@@ -139,13 +102,20 @@
             </div>
             <div id="contacto" class="contacto">
                 <h4>Contactanos:</h4>
-                @foreach($getContactos as $Contactos)
-                <p><i class="fa-solid fa-phone"></i> {{$Contactos->numero_c}} <a target="_blank" href="https://wa.me/{{$Contactos->numero}}"><i class="fa-brands fa-whatsapp"></i></a></p>
+                <div>
+                    <div>
+                        <p><i class="fa-solid fa-phone"></i> (02) 3202-585 </p> 
+                    </div>
+                    <div>    
+                        <p><a target="_blank" href="https://wa.me/0999999999"><i class="fa-brands fa-whatsapp"></i></a></p>
+                    </div>
+                </div>
                 <h4>Correo:</h4>
-                <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">{{$Contactos->correo}}</a></p>
+                <div>
+                    <p class="correo"><i class="fa-solid fa-envelope"></i><a target="_blank" href="">su.correo@correo.com<a></p>
+                </div>
                 <h4>Dirección:</h4>
                 <p class="direccion"><i class="fa-solid fa-location-dot"></i> Salvador Bravo, Quito 170131</p>
-                @endforeach
               </div>
             <div id="direccion" class="geo">
                 <h4><i class="fa-solid fa-map-location-dot"></i> Geolocalización:</h4>

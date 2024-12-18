@@ -13,7 +13,7 @@ class MisionVisions extends Migration
      */
     public function up()
     {
-        Schema::create('mision_visions', function(Blueprint $table){
+        Schema::create('mision__visions', function(Blueprint $table){
             $table->id();
             $table->text('texto');
             $table->text('url');
@@ -31,6 +31,6 @@ class MisionVisions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mision_visions');
+        Schema::dropIfExists('mision__visions');
     }
 }

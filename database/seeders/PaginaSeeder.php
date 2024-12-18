@@ -24,7 +24,7 @@ class PaginaSeeder extends Seeder
             'direccion' => $faker->text
         ]);
         
-        DB::table('mision_visions')->insert([
+        DB::table('mision__visions')->insert([
             'texto' => $faker->text,
             'url' => $faker->url
         ]);
