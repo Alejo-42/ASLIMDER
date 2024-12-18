@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Redes extends Model
+class Mision_Visions extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'url', 'imagenes_id'
+        'texto', 'url', 'imagenes_id'
     ];
 }

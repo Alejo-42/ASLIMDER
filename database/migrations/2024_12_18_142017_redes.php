@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class MisionVisions extends Migration
+class Redes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class MisionVisions extends Migration
      */
     public function up()
     {
-        Schema::create('mision_visions', function(Blueprint $table){
+        Schema::create('redes', function(Blueprint $table){
             $table->id();
-            $table->text('mision');
-            $table->text('vision');
+            $table->text('url');
+            $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
+            //$table->unsignedBigInteger('imagenes_id');
+            //$table->foreign('imagenes_id')->references('id')->on('imagenes');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class MisionVisions extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mision_visions');
+        Schema::dropIfExists('redes');
     }
 }

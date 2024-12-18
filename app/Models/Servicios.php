@@ -10,6 +10,6 @@ class Servicios extends Model
     use HasFactory;
 
     protected $fillable = [
-        'servicio', 'descripcion'
+        'titulo', 'descripcion','servicioURL','imagenes_id','categoria_id'
     ];
 }

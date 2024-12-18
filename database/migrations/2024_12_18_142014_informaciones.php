@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Redes extends Migration
+class Informaciones extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Redes extends Migration
      */
     public function up()
     {
-        Schema::create('redes', function(Blueprint $table){
+        Schema::create('informaciones',function(Blueprint $table){
             $table->id();
-            $table->string('icono');
-            $table->text('link');
+            $table->text('logo');
+            $table->string('correo');
+            $table->string('telefono');
+            $table->text('direccion');
+            $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class Redes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('redes');
+        Schema::dropIfExists('informaciones');
     }
 }
