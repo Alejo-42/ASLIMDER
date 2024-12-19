@@ -13,7 +13,9 @@
     <main>
         <ul>
             <li><a href="/misionVision">Mision Vision</a></li>
-            <li><a href="/contactos">Contactos</a></li>
+            <li><a href="/imagenes">IMG</a></li>
+            <li><a href="/categorias">Categorias</a></li>
+            <li><a href="/informaciones">Informaciones</a></li>
             <li><a href="/redes">Redes</a></li>
             <li><a href="/servicios">Servicios</a></li>
             <li><a href="/">Volver</a></li>

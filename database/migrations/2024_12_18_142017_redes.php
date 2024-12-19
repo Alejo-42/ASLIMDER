@@ -17,8 +17,8 @@ class Redes extends Migration
             $table->id();
             $table->text('url');
             $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
-            //$table->unsignedBigInteger('imagenes_id');
-            //$table->foreign('imagenes_id')->references('id')->on('imagenes');
+            $table->unsignedBigInteger('imagenes_id');
+            $table->foreign('imagenes_id')->references('id')->on('imagenes');
             $table->timestamps();
         });
     }

@@ -19,10 +19,10 @@ class Servicios extends Migration
             $table->string('descripcion');
             $table->text('servicioURL');
             $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
-            /*$table->unsignedBigInteger('imagenes_id');
+            $table->unsignedBigInteger('imagenes_id');
             $table->foreign('imagenes_id')->references('id')->on('imagenes');
             $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias');*/
+            $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->timestamps();
         });
     }

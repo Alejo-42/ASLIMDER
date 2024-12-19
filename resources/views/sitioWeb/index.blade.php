@@ -72,18 +72,22 @@
         </div>
         <div id="sobre" class="m-v">
             <div class="mision">
+                @foreach($getMV as $mision)
                 <h3>Misión:</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quisquam nisi, nam amet et esse. Voluptatem eius perspiciatis doloribus porro, delectus molestiae non adipisci vitae magnam, eos, minus sunt saepe?</p>
+                <p>{{$mision->texto}}</p>
                 <div>
-                    <img src="https://placehold.co/150" alt="Misión">
+                    <img src="{{$mision->url}}" alt="Misión">
                 </div>
+                @endforeach
             </div>
             <div class="vision">
+                @foreach($getMV as $vision)
                 <div>
-                    <img src="https://placehold.co/150" alt="Visión">
+                    <img src="{{$vision->url}}" alt="Visión">
                 </div>
                 <h3>Visión:</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo minus quae vero tempora suscipit impedit aliquid ratione nihil et! Quasi voluptate illo corrupti aperiam eaque odit nulla architecto. Tenetur, accusamus?</p>
+                <p>{{$vision->texto}}</p>
+                @endforeach
             </div>
         </div>
     </main>

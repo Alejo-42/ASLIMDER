@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginaController;
-use App\Http\Controllers\MisionVisionController;
-use App\Http\Controllers\ContactosController;
+use App\Http\Controllers\Mision_VisionsController;
+use App\Http\Controllers\ImagenesController;
+use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\InformacionesController;
 use App\Http\Controllers\RedesController;
 use App\Http\Controllers\ServiciosController;
 
@@ -21,18 +23,30 @@ use App\Http\Controllers\ServiciosController;
 Route::get('/', [PaginaController::class,'inicio']);
 Route::get('/volver',[PaginaController::class,'panelDeControl']);
 Route::get('/panelDeControl', [PaginaController::class,'panelDeControl']);
-// MISION VISION //
-Route::get('/misionVision',[MisionVisionController::class,'inicio']);
-Route::post('/misionVision/guardar',[MisionVisionController::class,'guardar']);
-Route::get('/misionVision/editar/{id}',[MisionVisionController::class,'editar']);
-Route::put('/misionVision/actualizar/{id}',[MisionVisionController::class,'actualizar']);
-Route::delete('/misionVision/eliminar/{id}',[MisionVisionController::class,'eliminar']);
-// CONTACTOS //
-Route::get('/contactos',[ContactosController::class,'inicio']);
-Route::post('/contactos/guardar',[ContactosController::class,'guardar']);
-Route::get('/contactos/editar/{id}',[ContactosController::class,'editar']);
-Route::put('/contactos/actualizar/{id}',[ContactosController::class,'actualizar']);
-Route::delete('/contactos/eliminar/{id}',[ContactosController::class,'eliminar']);
+// MISION Y VISION //
+Route::get('/misionVision',[Mision_VisionsController::class,'inicio']);
+Route::post('/misionVision/guardar',[Mision_VisionsController::class,'guardar']);
+Route::get('/misionVision/editar/{id}',[Mision_VisionsController::class,'editar']);
+Route::put('/misionVision/actualizar/{id}',[Mision_VisionsController::class,'actualizar']);
+Route::delete('/misionVision/eliminar/{id}',[Mision_VisionsController::class,'eliminar']);
+// IMAGENES //
+Route::get('/imagenes',[ImagenesController::class,'inicio']);
+Route::post('/imagenes/guardar',[ImagenesController::class,'guardar']);
+Route::get('/imagenes/editar/{id}',[ImagenesController::class,'editar']);
+Route::put('/imagenes/actualizar/{id}',[ImagenesController::class,'actualizar']);
+Route::delete('/imagenes/eliminar/{id}',[ImagenesController::class,'eliminar']);
+// CATEGORIAS //
+Route::get('/categorias',[CategoriasController::class,'inicio']);
+Route::post('/categorias/guardar',[CategoriasController::class,'guardar']);
+Route::get('/categorias/editar/{id}',[CategoriasController::class,'editar']);
+Route::put('/categorias/actualizar/{id}',[CategoriasController::class,'actualizar']);
+Route::delete('/categorias/eliminar/{id}',[CategoriasController::class,'eliminar']);
+//INFORMACIONES //
+Route::get('/informaciones',[InformacionesController::class,'inicio']);
+Route::post('/informaciones/guardar',[InformacionesController::class,'guardar']);
+Route::get('/informaciones/editar/{id}',[InformacionesController::class,'editar']);
+Route::put('/informaciones/actualizar/{id}',[InformacionesController::class,'actualizar']);
+Route::delete('/informaciones/eliminar/{id}',[InformacionesController::class,'eliminar']);
 // REDES //
 Route::get('/redes',[RedesController::class,'inicio']);
 Route::post('/redes/guardar',[RedesController::class,'guardar']);
