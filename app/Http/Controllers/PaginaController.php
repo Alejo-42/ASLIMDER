@@ -18,7 +18,7 @@ class PaginaController extends Controller
         $getServicios = Servicios::all();
         $getRedes = Redes::all();
         $getImagenes = Imagenes::all();
-        $getCategorias = Categorias::all();
+        $getCategorias = Categorias::all(); 
         
         return view('sitioWeb/index', compact(
             'getInformaciones',
