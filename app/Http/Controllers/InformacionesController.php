@@ -12,6 +12,13 @@ class InformacionesController extends Controller
         return view('layouts/informaciones', compact('getInfo'));
     }
     public function guardar(Request $request){
+        $request->validate([
+            'logo' => 'required',
+            'correo' => 'required|email',
+            'telefono' => 'required|num',
+            'direccion' => 'required'
+        ]);
+        
         Informaciones::create($request->all());
         return redirect()->to('informaciones');
     }
@@ -20,6 +27,12 @@ class InformacionesController extends Controller
         return view('/layouts/edits/informaciones',compact('editarInfo'));
     }
     public function actualizar(Request $request, $id){
+        $request->validate([
+            'logo' => 'required',
+            'correo' => 'required|email ',
+            'telefono' => 'required|num',
+            'direccion' => 'required'
+        ]);
         $actInfo = Informaciones::findOrFail($id);
         $requestInfo = $request->all();
         $actInfo->update($requestInfo);

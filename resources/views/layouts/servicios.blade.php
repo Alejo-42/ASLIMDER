@@ -49,18 +49,33 @@
             @csrf
             <label for="titulo">Titulo:</label><br>
             <input type="text" name="titulo" id="titulo"><br>
+            @error('titulo')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             
             <label for="descripcion">Descripcion:</label><br>
             <input type="text" name="descripcion" id="descripcion"><br>
+            @error('descripcion')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="servicioURL">Servicio:</label><br>
             <input type="text" name="servicioURL" id="servicioURL"><br>
+            @error('servicioURL')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="imagenes_id">ID de la imagen:</label><br>
             <input type="text" name="imagenes_id" id="imagenes_id"><br>
+            @error('imagenes_id')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="categoria_id">ID de la Categoria:</label><br>
             <input type="text" name="categoria_id" id="categoria_id"><br>
+            @error('categoria_id')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <br>
             <button type="submit">Guardar Datos</button>
         </form>

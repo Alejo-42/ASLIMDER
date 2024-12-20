@@ -41,6 +41,9 @@
             @csrf
             <label for="nombreCT">NOMBRE:</label><br>
             <input type="text" name="nombreCT" id="nombreCT"><br>
+            @error('nombreCT')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <br>
             <button type="submit">Guardar Datos</button>
         </form>

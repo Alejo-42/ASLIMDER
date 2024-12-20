@@ -12,6 +12,9 @@ class ImagenesController extends Controller
         return view('layouts/imagenes', compact('getImagenes'));
     }
     public function guardar(Request $request){
+        $request->validate([
+            'imgURL' => 'required'
+        ]);
         Imagenes::create($request->all());
         return redirect()->to('imagenes');
     }
@@ -20,6 +23,9 @@ class ImagenesController extends Controller
         return view('/layouts/edits/imagenes',compact('editarImagenes'));
     }
     public function actualizar(Request $request, $id){
+        $request->validate([
+            'imgURL' => 'required'
+        ]);
         $actImagenes = Imagenes::findOrFail($id);
         $requestIMG = $request->all();
         $actImagenes->update($requestIMG);

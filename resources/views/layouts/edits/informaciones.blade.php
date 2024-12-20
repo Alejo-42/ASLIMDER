@@ -11,16 +11,28 @@
         @csrf
         @method('put')
         <label for="logo">Logo:</label><br>
-            <input value="{{$editarInfo->logo}}" type="text" name="logo" id="logo"><br>
+        <input value="{{$editarInfo->logo}}" type="text" name="logo" id="logo"><br>
+        @error('logo')
+        <p style="color: red">{{$message}}</p>
+        @enderror
 
-            <label for="correo">Correo:</label><br>
-            <input value="{{$editarInfo->correo}}" type="text" name="correo" id="correo"><br>
+        <label for="correo">Correo:</label><br>
+        <input value="{{$editarInfo->correo}}" type="text" name="correo" id="correo"><br>
+        @error('correo')
+        <p style="color: red">{{$message}}</p>
+        @enderror
 
-            <label for="telefono">Telefono:</label><br>
-            <input value="{{$editarInfo->telefono}}" type="text" name="telefono" id="telefono"><br>
+        <label for="telefono">Telefono:</label><br>
+        <input value="{{$editarInfo->telefono}}" type="text" name="telefono" id="telefono"><br>
+        @error('telefono')
+        <p style="color: red">{{$message}}</p>
+        @enderror
 
-            <label for="direccion">Dirección:</label><br>
-            <input value="{{$editarInfo->direccion}}" type="text" name="direccion" id="direccion"><br>
+        <label for="direccion">Dirección:</label><br>
+        <input value="{{$editarInfo->direccion}}" type="text" name="direccion" id="direccion"><br>
+        @error('direccion')
+        <p style="color: red">{{$message}}</p>
+        @enderror
         <button type="submit">Actualizar Datos</button>
     </form>
 </body>

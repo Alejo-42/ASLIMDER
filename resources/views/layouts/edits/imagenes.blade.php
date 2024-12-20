@@ -12,6 +12,9 @@
         @method('put')
         <label for="imgURL">URL de la imagen:</label><br>
         <input value="{{$editarImagenes->imgURL}}" type="text" name="imgURL" id="imgURL"><br>
+        @error('imgURL')
+        <p style="color: red">{{$message}}</p>
+        @enderror
 
         <button type="submit">Actualizar Datos</button>
     </form>

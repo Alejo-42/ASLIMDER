@@ -12,7 +12,9 @@
         @method('put')
         <label for="nombreCT">Nombre de la categoria:</label><br>
         <input value="{{$editarCT->nombreCT}}" type="text" name="nombreCT" id="nombreCT"><br>
-
+        @error('nombreCT')
+        <p style="color: red">{{$message}}</p>
+        @enderror
         <button type="submit">Actualizar Datos</button>
     </form>
 </body>

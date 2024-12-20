@@ -47,15 +47,27 @@
             @csrf
             <label for="logo">Logo:</label><br>
             <input type="text" name="logo" id="logo"><br>
+            @error('logo')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="correo">Correo:</label><br>
             <input type="text" name="correo" id="correo"><br>
+            @error('correo')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="telefono">Telefono:</label><br>
             <input type="text" name="telefono" id="telefono"><br>
+            @error('telefono')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="direccion">Dirección:</label><br>
             <input type="text" name="direccion" id="direccion"><br>
+            @error('direccion')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <br>
             <button type="submit">Guardar Datos</button>
         </form>

@@ -12,6 +12,9 @@ class CategoriasController extends Controller
         return view('layouts/categorias', compact('getCT'));
     }
     public function guardar(Request $request){
+        $request->validate([
+            'nombreCT' => 'required'
+        ]);
         Categorias::create($request->all());
         return redirect()->to('categorias');
     }
@@ -20,6 +23,9 @@ class CategoriasController extends Controller
         return view('layouts/edits/categorias',compact('editarCT'));
     }
     public function actualizar(Request $request,$id){
+        $request->validate([
+            'nombreCT' => 'required'
+        ]);
         $actCT = Categorias::findOrFail($id);
         $requestCT = $request->all();
         $actCT->update($requestCT);

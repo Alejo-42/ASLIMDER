@@ -43,9 +43,15 @@
             @csrf
             <label for="url">URL:</label><br>
             <input type="text" name="url" id="url"><br>
+            @error('url')
+            <p style="color: red">{{$message}}</p>
+            @enderror
 
             <label for="imagenes_id">ID Imagen:</label><br>
             <input type="text" name="imagenes_id" id="imagenes_id"><br>
+            @error('imagenes_id')
+            <p style="color: red">{{$message}}</p>
+            @enderror
             <br>
             <button type="submit">Guardar Datos</button>
         </form>

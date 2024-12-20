@@ -12,6 +12,11 @@ class Mision_VisionsController extends Controller
         return view('layouts/misionVision',compact('getMV'));
     }
     public function guardar(Request $request){
+        $request->validate([
+            'texto' => 'required|alpha_num',
+            'url' => 'required',
+            'imagenes_id' => 'required|num'
+        ]);
         Mision_Visions::create($request->all());
         return redirect()->to('misionVision');
     }
@@ -20,6 +25,11 @@ class Mision_VisionsController extends Controller
         return view('layouts/edits/misionVision', compact('editarMV'));
     }
     public function actualizar(Request $request, $id){
+        $request->validate([
+            'texto' => 'required|alpha_num',
+            'url' => 'required',
+            'imagenes_id' => 'required|num'
+        ]);
         $actMV = Cliente::findOrFail($id);
         $requestMV = $request->all();
         $actMV->update($requestMV);

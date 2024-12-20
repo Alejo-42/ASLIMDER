@@ -12,6 +12,10 @@ class RedesController extends Controller
         return view('layouts/redes', compact('getRedes'));
     }
     public function guardar(Request $request){
+        $request->validate([
+            'url' => 'required',
+            'imagenes_id' => 'required|num',
+        ]);
         Redes::create($request->all());
         return redirect()->to('redes');
     }
@@ -20,6 +24,10 @@ class RedesController extends Controller
         return view('/layouts/edits/redes',compact('editarRedes'));
     }
     public function actualizar(Request $request, $id){
+        $request->validate([
+            'url' => 'required',
+            'imagenes_id' => 'required|num',
+        ]);
         $actRedes = Redes::findOrFail($id);
         $requestRedes = $request->all();
         $actRedes->update($requestRedes);
