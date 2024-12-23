@@ -72,21 +72,21 @@
         </div>
         <div id="sobre" class="m-v">
             <div class="mision">
-                @foreach($getMV as $mision)
+                @foreach($get_MV as $mision)
                 <h3>Misión:</h3>
-                <p>{{$mision->texto}}</p>
+                <p>{{$mision->texto_mv}}</p>
                 <div>
-                    <img src="{{$mision->url}}" alt="Misión">
+                    <img src="{{$mision->img_url}}" alt="Misión">
                 </div>
                 @endforeach
             </div>
             <div class="vision">
-                @foreach($getMV as $vision)
+                @foreach($get_MV as $vision)
                 <div>
-                    <img src="{{$vision->url}}" alt="Visión">
+                    <img src="{{$vision->img_url}}" alt="Visión">
                 </div>
                 <h3>Visión:</h3>
-                <p>{{$vision->texto}}</p>
+                <p>{{$vision->texto_mv}}</p>
                 @endforeach
             </div>
         </div>

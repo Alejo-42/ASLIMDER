@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: gray;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 5vw;
+    }
+}
+main{
+    flex: 1;
+    .tabla-a, .tabla-d{
+        table{
+            text-align: center;
+            tbody{
+                tr{
+                    .acciones{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .formulario{
+        margin: 1vw;
+        background-color: rgb(175, 175, 175);
+        padding: 1vw;
+        form{
+            input{
+                width: 60%;
+            }
+            button{
+                color: white;
+                background-color: black;
+                border: solid 2px darkslategrey;
+                padding: 0.5vw;
+            }
+        }
+        .volver{
+            margin: 1w;
+            button{
+                background-color: black;
+                border: solid 2px darkslategrey;
+                color: white;
+                padding: 0.5vw;
+            }
+        }
+    }
+}
+footer{
+    background-color: black;
+    color: white;
+    .derechos{
+        padding: 1px;
+        text-align: center;
+        font-size: smaller;
+        z-index: 1;
+        bottom: 0;
+        left: 0;    
+        position: static;
+        width: 100%;
+        margin: 0;
+        flex-wrap: wrap;
+    }
+}

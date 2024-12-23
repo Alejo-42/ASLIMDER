@@ -29,6 +29,7 @@ Route::post('/misionVision/guardar',[Mision_VisionsController::class,'guardar'])
 Route::get('/misionVision/editar/{id}',[Mision_VisionsController::class,'editar']);
 Route::put('/misionVision/actualizar/{id}',[Mision_VisionsController::class,'actualizar']);
 Route::delete('/misionVision/eliminar/{id}',[Mision_VisionsController::class,'eliminar']);
+Route::get('/misionVision/estado/{id}',[Mision_VisionsController::class,'estado']);
 // IMAGENES //
 Route::get('/imagenes',[ImagenesController::class,'inicio']);
 Route::post('/imagenes/guardar',[ImagenesController::class,'guardar']);
