@@ -9,9 +9,12 @@
     <title>IMAGENES</title>
 </head>
 <body>
-    <h1>IMAGENES</h1>
-    <div class="tabla">
-        <table class="table table-dark">
+    <header>
+        <h1>IMAGENES</h1>
+    </header>
+    <main>
+    <div class="tabla-a">
+        <table class="table table-dark table-bordered">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -20,16 +23,45 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($getImagenes as $Imagen)
+                @foreach($IMG_A as $Imagen)
                 <tr>
                     <th>{{$Imagen->id}}</th>
                     <td>{{$Imagen->imgURL}}</td>
-                    <td>
+                    <td class="acciones">
+                        <a href="/imagenes/estado/{{$Imagen->id}}"><button type="button" class="btn btn-secondary">Estado</button></a>
                         <a href="/imagenes/editar/{{$Imagen->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
                         <form action="/imagenes/eliminar/{{$Imagen->id}}" method="post">
-                                @csrf
-                                @method('delete')
-                                <button class="btn btn-danger" type="submit">Eliminar</button>
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger" type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    <div class="tabla-d">
+        <table class="table table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($IMG_D as $Imagen)
+                <tr>
+                    <th>{{$Imagen->id}}</th>
+                    <td>{{$Imagen->imgURL}}</td>
+                    <td class="acciones">
+                        <a href="/imagenes/estado/{{$Imagen->id}}"><button type="button" class="btn btn-secondary">Estado</button></a>
+                        <a href="/imagenes/editar/{{$Imagen->id}}"><button type="button" class="btn btn-primary">Editar</button></a>
+                        <form action="/imagenes/eliminar/{{$Imagen->id}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-danger" type="submit">Eliminar</button>
                         </form>
                     </td>
                 </tr>
@@ -48,8 +80,12 @@
             <br>
             <button type="submit">Guardar Datos</button>
         </form>
+        <a class="volver" href="/volver">Volver</a>
     </div>
-    <a href="/volver">VOLVER</a>
+    </main>
+    <footer>
+        <p class="derechos">Derechos de autor reservados. &copy 2024</p>    
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>

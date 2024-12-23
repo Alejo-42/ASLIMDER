@@ -17,7 +17,7 @@
             @csrf
             @method('put')
             <label for="texto">Texto:</label><br>
-            <input placehoLder="Ingrese aqui el texto para la mision y/o vision" value="{{$editarMV->texto}}" type="text" name="texto" id="texto"><br>
+            <input placeholder="Ingrese aqui el texto para la mision y/o vision" value="{{$editarMV->texto}}" type="text" name="texto" id="texto"><br>
             @error('texto')
             <p style="color: red">{{$message}}</p>
             @enderror
@@ -29,7 +29,7 @@
             @enderror
 
             <label for="imagenes_id">ID Imagen</label><br>
-            <input placeholder="Seleccione que imagen desea que aparezca" value="{{$editarMV->imagenes_id}}" type="text" name="imagenes_id" id="imagenes_id"><br>
+            <input placeholder="Seleccione que imagen desea que aparezca" value="{{$editarMV->imagenes_id}}" type="number" name="imagenes_id" id="imagenes_id"><br>
             @error('imagenes_id')
             <p style="color: red">{{$message}}</p>
             @enderror

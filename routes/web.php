@@ -36,12 +36,14 @@ Route::post('/imagenes/guardar',[ImagenesController::class,'guardar']);
 Route::get('/imagenes/editar/{id}',[ImagenesController::class,'editar']);
 Route::put('/imagenes/actualizar/{id}',[ImagenesController::class,'actualizar']);
 Route::delete('/imagenes/eliminar/{id}',[ImagenesController::class,'eliminar']);
+Route::get('/imagenes/estado/{id}',[ImagenesController::class,'estado']);
 // CATEGORIAS //
 Route::get('/categorias',[CategoriasController::class,'inicio']);
 Route::post('/categorias/guardar',[CategoriasController::class,'guardar']);
 Route::get('/categorias/editar/{id}',[CategoriasController::class,'editar']);
 Route::put('/categorias/actualizar/{id}',[CategoriasController::class,'actualizar']);
 Route::delete('/categorias/eliminar/{id}',[CategoriasController::class,'eliminar']);
+Route::get('/categorias/estado/{id}',[CategoriasController::class,'estado']);
 //INFORMACIONES //
 Route::get('/informaciones',[InformacionesController::class,'inicio']);
 Route::post('/informaciones/guardar',[InformacionesController::class,'guardar']);

@@ -26,46 +26,21 @@ header{
 }
 main{
     flex: 1;
-    .tabla-a, .tabla-d{
-        table{
-            text-align: center;
-            tbody{
-                tr{
-                    .acciones{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
-        }
-    }
-    .formulario{
+    form{
         margin: 1vw;
         background-color: rgb(175, 175, 175);
         padding: 1vw;
-        form{
-            input{
-                width: 50%;
-            }
-            button{
-                color: white;
-                background-color: black;
-                border: solid 2px darkslategrey;
-                padding: 0.5vw;
-                margin: 1vw;
-            }
+        input{
+            width: 50%;
         }
-        .volver{
+        button{
             color: white;
             background-color: black;
             border: solid 2px darkslategrey;
             padding: 0.5vw;
-            margin: 1vw;
-            text-decoration: none;
         }
     }
+
 }
 footer{
     background-color: black;
