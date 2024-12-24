@@ -35,6 +35,9 @@ class PaginaController extends Controller
         ));
     }
     public function panelDeControl(){
-        return view('adminPc/panelDeControl');
+        return view('adminPC/panelDeControl');
+    }
+    public function index(){
+        return view('adminPC/misionVision/index');
     }
 }

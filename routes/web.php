@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\InformacionesController;
 use App\Http\Controllers\RedesController;
 use App\Http\Controllers\ServiciosController;
+use App\Http\Controllers\panel\MisionVisionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,15 +51,22 @@ Route::post('/informaciones/guardar',[InformacionesController::class,'guardar'])
 Route::get('/informaciones/editar/{id}',[InformacionesController::class,'editar']);
 Route::put('/informaciones/actualizar/{id}',[InformacionesController::class,'actualizar']);
 Route::delete('/informaciones/eliminar/{id}',[InformacionesController::class,'eliminar']);
+Route::get('/informaciones/estado/{id}',[InformacionesController::class,'estado']);
 // REDES //
 Route::get('/redes',[RedesController::class,'inicio']);
 Route::post('/redes/guardar',[RedesController::class,'guardar']);
 Route::get('/redes/editar/{id}',[RedesController::class,'editar']);
 Route::put('/redes/actualizar/{id}',[RedesController::class,'actualizar']);
 Route::delete('/redes/eliminar/{id}',[RedesController::class,'eliminar']);
+Route::get('/redes/estado/{id}',[RedesController::class,'estado']);
 // SERVICIOS //
 Route::get('/servicios',[ServiciosController::class,'inicio']);
 Route::post('/servicios/guardar',[ServiciosController::class,'guardar']);
 Route::get('/servicios/editar/{id}',[ServiciosController::class,'editar']);
 Route::put('/servicios/actualizar/{id}',[ServiciosController::class,'actualizar']);
 Route::delete('/servicios/eliminar/{id}',[ServiciosController::class,'eliminar']);
+Route::get('/servicios/estado/{id}',[ServiciosController::class,'estado']);
+
+// MISION VISION //
+Route::get('/misvis',[MisionVisionController::class,'index']);
+Route::get('/misvis/create',[MisionVisionController::class,'create']);
