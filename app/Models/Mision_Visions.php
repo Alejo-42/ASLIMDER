@@ -10,6 +10,6 @@ class Mision_Visions extends Model
     use HasFactory;
 
     protected $fillable = [
-        'texto', 'url', 'imagenes_id'
+        'name', 'image', 'status'
     ];
 }

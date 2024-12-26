@@ -70,3 +70,5 @@ Route::get('/servicios/estado/{id}',[ServiciosController::class,'estado']);
 // MISION VISION //
 Route::get('/misvis',[MisionVisionController::class,'index']);
 Route::get('/misvis/create',[MisionVisionController::class,'create']);
+Route::get('/misvis/edit',[MisionVisionController::class,'edit']);
+Route::post('/misvis/store',[MisionVisionController::class,'store']);

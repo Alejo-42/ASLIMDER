@@ -19,6 +19,7 @@
             <li><a href="/redes">Redes</a></li>
             <li><a href="/servicios">Servicios</a></li>
             <li><a href="/">Volver</a></li>
+            <a href="/misvis">MV</a>
         </ul>
     </main>
     <footer>

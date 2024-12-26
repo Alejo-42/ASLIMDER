@@ -15,11 +15,9 @@ class MisionVisions extends Migration
     {
         Schema::create('mision__visions', function(Blueprint $table){
             $table->id();
-            $table->text('texto');
-            $table->text('url');
+            $table->string('name');
+            $table->text('image');
             $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
-            $table->unsignedBigInteger('imagenes_id');
-            $table->foreign('imagenes_id')->references('id')->on('imagenes');
             $table->timestamps();
         });
     }

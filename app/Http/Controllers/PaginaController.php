@@ -21,9 +21,9 @@ class PaginaController extends Controller
         $getImagenes = Imagenes::all();
         $getCategorias = Categorias::all(); 
         
-        $get_MV = DB::select('SELECT mv.texto AS texto_mv, img.imgURL AS img_url
+        /*$get_MV = DB::select('SELECT mv.texto AS texto_mv, img.imgURL AS img_url
         FROM mision__visions mv 
-        INNER JOIN imagenes img ON mv.imagenes_id = img.id');
+        INNER JOIN imagenes img ON mv.imagenes_id = img.id');*/
         return view('sitioWeb/index', compact(
             'getInformaciones',
             'getImagenes',
@@ -31,13 +31,9 @@ class PaginaController extends Controller
             'getServicios',
             'getRedes',
             'getCategorias',
-            'get_MV'
         ));
     }
     public function panelDeControl(){
         return view('adminPC/panelDeControl');
-    }
-    public function index(){
-        return view('adminPC/misionVision/index');
     }
 }

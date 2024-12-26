@@ -72,7 +72,7 @@
         </div>
         <div id="sobre" class="m-v">
             <div class="mision">
-                @foreach($get_MV as $mision)
+                @foreach($getMV as $mision)
                 <h3>Misión:</h3>
                 <p>{{$mision->texto_mv}}</p>
                 <div>
@@ -81,7 +81,7 @@
                 @endforeach
             </div>
             <div class="vision">
-                @foreach($get_MV as $vision)
+                @foreach($getMV as $vision)
                 <div>
                     <img src="{{$vision->img_url}}" alt="Visión">
                 </div>
