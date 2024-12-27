@@ -6,7 +6,7 @@ use App\Http\Controllers\Mision_VisionsController;
 use App\Http\Controllers\ImagenesController;
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\InformacionesController;
-use App\Http\Controllers\RedesController;
+use App\Http\Controllers\panel\RedesController;
 use App\Http\Controllers\ServiciosController;
 use App\Http\Controllers\panel\MisionVisionController;
 
@@ -23,14 +23,7 @@ use App\Http\Controllers\panel\MisionVisionController;
 // PAGINA PRINCIPAL //
 Route::get('/', [PaginaController::class,'inicio']);
 Route::get('/volver',[PaginaController::class,'panelDeControl']);
-Route::get('/panelDeControl', [PaginaController::class,'panelDeControl']);
-// MISION Y VISION //
-Route::get('/misionVision',[Mision_VisionsController::class,'inicio']);
-Route::post('/misionVision/guardar',[Mision_VisionsController::class,'guardar']);
-Route::get('/misionVision/editar/{id}',[Mision_VisionsController::class,'editar']);
-Route::put('/misionVision/actualizar/{id}',[Mision_VisionsController::class,'actualizar']);
-Route::delete('/misionVision/eliminar/{id}',[Mision_VisionsController::class,'eliminar']);
-Route::get('/misionVision/estado/{id}',[Mision_VisionsController::class,'estado']);
+Route::get('/panel', [PaginaController::class,'panelDeControl']);
 // IMAGENES //
 Route::get('/imagenes',[ImagenesController::class,'inicio']);
 Route::post('/imagenes/guardar',[ImagenesController::class,'guardar']);
@@ -69,6 +62,9 @@ Route::get('/servicios/estado/{id}',[ServiciosController::class,'estado']);
 
 // MISION VISION //
 Route::get('/misvis',[MisionVisionController::class,'index']);
+Route::get('/misvisD',[MisionVisionController::class,'indexD']);
 Route::get('/misvis/create',[MisionVisionController::class,'create']);
-Route::get('/misvis/edit',[MisionVisionController::class,'edit']);
 Route::post('/misvis/store',[MisionVisionController::class,'store']);
+Route::get('/misvis/edit/{id}',[MisionVisionController::class,'edit']);
+Route::put('/misvis/update/{imagen}',[MisionVisionController::class,'update']);
+Route::get('/misvis/status/{id}',[MisionVisionController::class,'status']);

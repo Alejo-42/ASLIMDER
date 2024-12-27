@@ -29,7 +29,7 @@
         <div class="position-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#">
+              <a class="nav-link " aria-current="page" href="/panel">
                 <span data-feather="home"></span>
                 Panel de Control
               </a>
@@ -47,7 +47,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/MisVis">
+              <a class="nav-link" href="/misvis">
                 <span data-feather="users"></span>
                 Mision y Vision
               </a>
@@ -59,9 +59,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/">
                 <span data-feather="layers"></span>
-                Integrations
+                Volver
               </a>
             </li>
           </ul>

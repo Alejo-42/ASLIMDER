@@ -15,10 +15,10 @@ class Redes extends Migration
     {
         Schema::create('redes', function(Blueprint $table){
             $table->id();
-            $table->text('url');
+            $table->string('title');//nombre
+            $table->string('icon');//icono 
+            $table->text('link');//link red social
             $table->enum('status',['ACTIVATE','DESACTIVATE'])->default('ACTIVATE');
-            $table->unsignedBigInteger('imagenes_id');
-            $table->foreign('imagenes_id')->references('id')->on('imagenes');
             $table->timestamps();
         });
     }
